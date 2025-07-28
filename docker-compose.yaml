@@ -70,7 +70,7 @@ services:
         bench new-site --no-mariadb-socket --admin-password=admin --db-root-password=admin --install-app erpnext --set-default frontend;
         bench --site frontend install-app hrms;
         bench --site frontend install-app payments;
-        bench --site $$SERVICE_FQDN_FRONTEND set-config host_name $$SERVICE_URL_FRONTEND;
+        bench --site frontend set-config host_name $$SERVICE_URL_FRONTEND;
 
   db:
     image: mariadb:11.2
