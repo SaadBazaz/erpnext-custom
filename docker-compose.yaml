@@ -28,6 +28,7 @@ services:
         bench set-config -g redis_queue "redis://$$REDIS_QUEUE";
         bench set-config -g redis_socketio "redis://$$REDIS_QUEUE";
         bench set-config -gp socketio_port $$SOCKETIO_PORT;
+        bench set-config -g server_script_enabled true; # found here: https://discuss.frappe.io/t/enable-server-scripts/109059
     environment:
       DB_HOST: db
       DB_PORT: "3306"
